@@ -78,7 +78,7 @@ export const StartGame = () => {
   };
 
   const handleResetAnswers = () => {
-    let resetPlayersArray = [...players];
+    let resetPlayersArray = [...players]; 
     resetPlayersArray.forEach((player, index) => {
       player.lives = submittedPlayersAnswers[index].goodAnswer
         ? player.lives - 1
