@@ -23,27 +23,20 @@ export const StartGame = () => {
         const parsedPlayers = JSON.parse(playersArray);
 
         setPlayers(parsedPlayers);
-        console.log("players")
-        console.log(players)
         let newSubmittedPlayersAnswers = [];
 
         parsedPlayers.forEach((player) => {
             newSubmittedPlayersAnswers.push({ submitted: false });
         });
-
-        console.log("newSubmittedPlayersAnswers")
-        console.log(newSubmittedPlayersAnswers)
         setSubmittedPlayersAnswers(newSubmittedPlayersAnswers);
 
         //get numer of slides
         const slides = document.getElementsByClassName('carousel-item').length;
-        console.log("slides")
         setNumberOfSlides(slides);
         
     }, [])
 
     const handleGoToNextSlide = (slideIndex) => {
-        console.log(slideIndex);
         setActiveSlideIndex(slideIndex);
     }
 
@@ -51,22 +44,15 @@ export const StartGame = () => {
         let newSubmittedPlayers = [...submittedPlayersAnswers];
         newSubmittedPlayers[index].submitted = true;
         newSubmittedPlayers[index].goodAnswer = true;
-        console.log("newSubmittedPlayers")
-        console.log(newSubmittedPlayers)
         setSubmittedPlayersAnswers(newSubmittedPlayers);
     }
 
     const handleWrongAnswer = (player, index) => {
         let newPlayersData = [...players]
         newPlayersData[index].lives--;
-        console.log('newPlayersData');
-        console.log(newPlayersData);
         let newSubmittedPlayers = [...submittedPlayersAnswers];
         newSubmittedPlayers[index].submitted = true;
         newSubmittedPlayers[index].goodAnswer = false;
-
-        console.log("newSubmittedPlayers")
-        console.log(newSubmittedPlayers)
 
         setSubmittedPlayersAnswers(newSubmittedPlayers);
     }
@@ -79,7 +65,6 @@ export const StartGame = () => {
     }
 
     const handleSubmitAnswers = () => {
-        console.log('a validé!')
         //show players remaining lives
         setIsSubmitted(true);
 
@@ -99,15 +84,19 @@ export const StartGame = () => {
             submittedPlayersAnswers[index].submitted = false;
             submittedPlayersAnswers[index].goodAnswer = null;
         })
-
-        console.log("resetPlayersArray")
-        console.log(players)
         setPlayers(resetPlayersArray);
     }
 
     const goToNextQuestion = () => {
-        setActiveSlideIndex(activeSlideIndex + 1)
         setIsSubmitted(false);
+        console.log("numberOfSlides")
+        console.log(numberOfSlides)
+        console.log("activeSlideIndex")
+        console.log(activeSlideIndex)
+        if(activeSlideIndex + 2 == numberOfSlides) {
+            setWasLastQuestion(true);
+        }
+        setActiveSlideIndex(activeSlideIndex + 1)
     }
 
     return (<>
@@ -213,8 +202,8 @@ export const StartGame = () => {
                                                     onClick={() => handleWrongAnswer(player, index)} />
                                                 <FaCoffee style={{ cursor: 'pointer', marginLeft: '2rem', marginTop: '1.5rem' }} size={'1.5rem'} color={'grey'}
                                                     onClick={() => handleNoAnswer(player, index)} /></>
-                                            : player.lives > 0 ? (<div style={{ marginLeft: '2rem', marginTop: '1rem' }}>{[...Array(player.lives)].map(() => {
-                                                return (<span style={{ fontSize: '1.5rem' }}>
+                                            : player.lives > 0 ? (<div style={{ marginLeft: '2rem', marginTop: '1rem' }}>{[...Array(player.lives)].map((value, indexLives) => {
+                                                return (<span style={{ fontSize: '1.5rem' }} key={indexLives}>
                                                     <img
                                                         src={require("../images/dory_lives.jfif")}
                                                         style={{ width: '3rem', height: '3rem' }}

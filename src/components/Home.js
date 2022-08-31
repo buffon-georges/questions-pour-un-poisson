@@ -19,7 +19,7 @@ export const Home = () => {
 
     const addNewPlayer = () => {
         console.log('cliqué!')
-        let newPlayer = { id: counter, name: null, lives: 5};
+        let newPlayer = { id: counter, name: null, lives: 5 };
         let playersData = [...players];
         playersData.push(newPlayer);
         setPlayers(playersData);
@@ -33,16 +33,28 @@ export const Home = () => {
         setPlayers(playersData);
     }
 
-    const handleSubmit = () => {
-        //check if every player has a name:
-        //TODO...
+    const handleSubmit = (e) => {
+        e.preventDefault();
+   
+        let showAlert;
+        players.forEach((player, index) => {
+            console.log("player")
+            console.log(player)
+            if (player.name == null) {
+                showAlert = true;
+                alert('Saisissez le pseudo de tous les participants');
+                return;
+            }
+        })
 
-        localStorage.setItem('playersArray', JSON.stringify(players));
-        navigate('/start-game')
+        if (!showAlert) {
+            localStorage.setItem('playersArray', JSON.stringify(players));
+            navigate('/start-game')
+        }
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={(e) => handleSubmit(e)}>
             <div>
                 <div style={{ marginTop: "2rem", marginBottom: '1rem', fontSize: '2rem' }}>Rentrer le nom des utilisateurs : </div>
                 <Form.Group>{players.map((player, index) => {
