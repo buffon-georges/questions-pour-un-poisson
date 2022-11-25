@@ -6,7 +6,7 @@ import { FaPlusCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
-    const [players, setPlayers] = useState([{ id: 0, name: null, lives: 5 }]);
+    const [players, setPlayers] = useState([{ id: 0, name: null, lives: 5, points: 0 }]);
     const [counter, setCounter] = useState(1);
     const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ export const Home = () => {
 
     const addNewPlayer = () => {
         console.log('cliqué!')
-        let newPlayer = { id: counter, name: null, lives: 5 };
+        let newPlayer = { id: counter, name: null, lives: 5, points: 0 };
         let playersData = [...players];
         playersData.push(newPlayer);
         setPlayers(playersData);
