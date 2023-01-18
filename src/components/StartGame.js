@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import { Badge, Button, Col, Row } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Alert from "react-bootstrap/Alert";
-import ListGroup from "react-bootstrap/ListGroup";
 import { FaCheckCircle, FaCoffee, FaTimesCircle } from "react-icons/fa";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './StartGame.css';
-import { questions } from "../utils/carouselWording";
+import { questions } from "../utils/carouselQuestions";
 
 export const StartGame = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -109,6 +108,7 @@ export const StartGame = () => {
       setHasStarted(true);
       setShowCountdown(false); //disappear after 5sec
     }, 4900);
+    window.scrollTo(0, 0)
   };
 
   const processStart = () => {
@@ -126,6 +126,7 @@ export const StartGame = () => {
       <> {!hasStarted && (<><Button onClick={processStart}>Démarrer</Button></>)}
         {hasStarted && (<>
           <Carousel
+            id='fish-carousel'
             fade
             interval={null}
             style={{ marginTop: "3rem", height: '30rem' }}
@@ -140,15 +141,18 @@ export const StartGame = () => {
             activeIndex={activeSlideIndex}
           >
             {questions.map((question, index) => (
-              <Carousel.Item style={{ marginTop: '2rem' }}>
+              <Carousel.Item style={{ marginTop: '3.3rem' }}>
                 <img
                   src={question.image}
-                  style={{ width: "30rem", height: "15rem", objectFit: "fill" }}
+                  style={{ width: "30rem", height: "15rem", objectFit: (question.objectFit ? question.objectFit : 'fill') }}
                 />
                 <Carousel.Caption>
                   <h4><Badge pill bg="secondary" >{question.title}</Badge></h4>
-                  <p id='intitule-question' style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>{question.content}</p>
-                  <ol style={{ listStyleType: "lower-alpha", marginLeft: "20rem", marginTop: '1rem' }}>
+                  <p id='intitule-question' style={{ fontWeight: 'bold', fontSize: '1.5rem', color: (question.color ? question.color : 'black') }}
+                    color='blue'>
+                    {question.content}
+                  </p>
+                  <ol style={{ listStyleType: (question.notAlphabetic ? 'none' : 'lower-alpha'), marginLeft: "20rem", marginTop: '1rem' }}>
                     {question.possibleAnswers.map((answer, index) => (
                       <li style={{ textIndent: "-20rem" }}>{answer.content}</li>
                     ))}
@@ -247,7 +251,7 @@ export const StartGame = () => {
                                 )}
                                 <span style={{ marginLeft: '1rem' }}>
                                   <b>
-                                    {player.points} {(player.points == 0 || player.points == 1)? 'point' : 'points'}
+                                    {player.points} {(player.points == 0 || player.points == 1) ? 'point' : 'points'}
                                   </b>
                                 </span>
                               </div>
@@ -295,7 +299,6 @@ export const StartGame = () => {
           <Alert.Heading>Pas de triche!</Alert.Heading>
           <p>
             Eteignez vos portables, les recherches sur Internet sont interdites.
-            On sévira toute tentative de triche
           </p>
         </Alert>
       </>)
