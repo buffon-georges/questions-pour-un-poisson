@@ -1,425 +1,447 @@
 export const questions =
     [
-        {
-            title: 'Question Réseau social',
-            content: 'Qui est à l\'origine du tweet suivant ?',
-            image: `${require('../images/flore_17.png')}`,
-            possibleAnswers: [
-                {
-                    content: "ZackNani"
-                },
-                {
-                    content: "Aminematué"
-                },
-                {
-                    content: "Vibrozor"
-                },
-                {
-                    content: "DrFlore" //yes
-                },
-            ]
-        },
-        {
-            title: 'Question SIGNUP',
-            content: 'Signup permet de créer des comptes NSRU. Cela signifie ...',
-            image: `${require('../images/complaints.png')}`,
-            possibleAnswers: [
-                {
-                    content: "Not Signed Request to User"
-                },
-                {
-                    content: "Not Signed Registered User"
-                },
-                {
-                    content: "Non Suscriber Referenced User" // yes
-                },
-                {
-                    content: "Non Suscribed or Registered User"
-                },
-            ]
-        },
-        {
-            title: 'Vrai/Faux ',
-            content: 'Chifai a été PO de Dory ?',
-            image: `${require('../images/train in.jpeg')}`,
-            possibleAnswers: [
-                {
-                    content: "Vrai"
-                },
-                {
-                    content: "Faux" // faux
-                }
-            ]
-        },
-        {
-            title: 'Question DORY ',
-            content: 'Alice est la combien-t-ième PO de l\'équipe ?',
-            image: `${require('../images/dory.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "3ème" //yes. Alexandre URVOY, Sylvie THIOLLENT
-                },
-                {
-                    content: "4ème"
-                },
-                {
-                    content: "5ème"
-                },
-                {
-                    content: "Aucune des propositions"
-                },
-            ]
-        },
-        {
-            title: 'Question Equipe TIN ',
-            content: 'Le dashboard invitation sera porté par l\'équipe ...',
-            image: `${require('../images/train in.jpeg')}`,
-            possibleAnswers: [
-                {
-                    content: "FEDS"
-                },
-                {
-                    content: "FIRE" // yes
-                },
-                {
-                    content: "VULKAN"
-                },
-                {
-                    content: "System Team"
-                },
-            ]
-        },
-        {
-            title: 'Question DORY',
-            content: 'De quoi parle la feature 1613 ?',
-            image: `${require('../images/blank.png')}`,
-            possibleAnswers: [
-                {
-                    content: "Réponse directe attendue" // VIM
-                }
-            ]
-        },
-        {
-            title: 'Question Equipe TIN ',
-            content: 'En quoi consiste le projet SUPERBAL ?',
-            notAlphabetic: true,
-            image: `${require('../images/superbowl.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "L'ancêtre de Multibal"
-                },
-                {
-                    content: "Suppression BAL internet sur contrat internet résilié" //yes
-                    //Suppression de BAL des clients résiliés Internet Seulement
-                    //hébergé sur PASS Erable
-                    //si client souhaite déplacer sa BAL depuis un contrat résilié vers un nouveau contrat Orange, vérification du statut 
-                },
-                {
-                    content: "Création de compte internet en ligne"
-                },
-                {
-                    content: "Suppression de compte internet en ligne"
-                },
-                {
-                    content: "Suppression BAL internet sur contrat actif"
-                }
-            ]
-        },
-        {
-            title: 'Question Règlementation',
-            content: 'Quel est le délai maximum pendant lequel Orange a le droit de conserver une bal avant suppression?',
-            image: `${require('../images/judge.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "Tant qu'Orange le juge nécessaire"
-                },
-                {
-                    content: "1 an"
-                },
-                {
-                    content: "6 mois"
-                },
-                {
-                    content: "5 ans"
-                },
-                {
-                    content: "Autre réponse"
-                },
-            ]
-        },
-        {
-            title: 'Question Equipe TIN ',
-            content: 'Que retrouve-t-on sur le logo de VULKAN ?',
-            image: `${require('../images/vulkan.png')}`,
-            possibleAnswers: [
-                {
-                    content: "Un forgeron portant un marteau"
-                },
-                {
-                    content: "Un volcan en éruption"
-                },
-                {
-                    content: "Un marteau et une enclume" //yes
-                },
-                {
-                    content: "Un captcha à résoudre"
-                },
-                {
-                    content: "Un taureau"
-                },
-            ]
-        },
-        {
-            title: 'Question MULTIBAL ',
-            content: 'Par combien d\'étapes doit passer un client qui fait un Multibal ?',
-            image: `${require('../images/dory.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "3"
-                },
-                {
-                    content: "4" //yes 1) vos informations, 2) Adresse email, 3) mot de passe, 4) Création
-                },
-                {
-                    content: "5"
-                },
-                {
-                    content: "6"
-                },
-            ]
-        },
-        {
-            title: 'Question Credentials ',
-            content: 'Que signifie LDAP ?',
-            //ldap permet d'accéder à des bases d'informations sur les utilisateurs d'un réseau, via l'interrogation d'annuaires. 
-            image: `${require('../images/ldap.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "Lightweight Directory Access Protocol" //yes
-                },
-                {
-                    content: "Live Data Access Protocol"
-                },
-                {
-                    content: "Autre proposition"
-                },
-            ]
-        },
-        {
-            title: 'Question Versions ',
-            content: 'Laquelle / lesquelles des propositions suivantes ne permet(tent) pas d\'avoir le numéro de version de l\'api de Signup sur tb2oab ?',
-            notAlphabetic: true,
-            image: `${require('../images/dory.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "Visiter https://login-tb2oab.staging.orange.fr/signup/api/status"
-                    //yes
-                },
-                {
-                    content: "Visiter https://login-tb2oab.staging.orange.fr/signup/api/version"
-                    //no, n'existe pas
-                },
-                {
-                    content: "Visiter https://login-tb2oab.staging.orange.fr/signup/api/env"
-                    // no, donne les variables d'env, pas le numéro de version
-                },
-                {
-                    content: "Demander à Seb E"
-                    // yes
-                },
-                {
-                    content: "Aucune des propositions"
-                },
-            ]
-        },
-        {
-            title: 'Question Equipe',
-            content: 'Qui se charge du portail JDD ?',
-            image: `${require('../images/train in.jpeg')}`,
-            possibleAnswers: [
-                {
-                    content: "FIRE"
-                },
-                {
-                    content: "FEDS" //yes
-                },
-                {
-                    content: "System Team"
-                },
-                {
-                    content: "Aucune des propositions"
-                },
-            ]
-        },
-        {
-            title: 'Question Equipe',
-            content: 'Quelles sont les 2 dernières personnes à avoir quittés l\'équipe DORY ?',
-            image: `${require('../images/dory.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "Réponse directe attendue" //Chifai & Gossard ?
-                }
-            ]
-        },
-        {
-            title: 'Question Manage',
-            content: 'Quel est le code basicat ?',
-            image: `${require('../images/dory.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "MAN"
-                },
-                {
-                    content: "MNG"
-                },
-                {
-                    content: "MGE"
-                },
-                {
-                    content: "Aucune des propositions" // GNM
-                },
-            ]
-        },
-        {
-            title: 'Question technique',
-            content: 'Laquelle / lesquelles des affirmation(s) suivante(s) permet(tent) d\'être sûr qu\'un JDD est un VRAI pro ?',
-            image: `${require('../images/dory.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "MSS = 6"
-                },
-                {
-                    content: "SPR = 7" //yes
-                },
-                {
-                    content: "SPR > 5"
-                },
-                {
-                    content: "La mention 'PROF' sur CSRTool" //outil du Customer Care d'Orange France permettant d'unifier les demandes d'assistances
-                    //pour les clients I, M, GP, Pro...
-                },
-                {
-                    content: "Autre proposition"
-                },
-            ]
-        },
-        {
-            title: 'Question Partenaire',
-            content: 'MCI peut modifier les moyens de contact ?',
-            image: `${require('../images/flore_3.png')}`,
-            possibleAnswers: [
-                {
-                    content: "Vrai"
-                },
-                {
-                    content: "Faux" //yes
-                }
-            ]
-        },
-        {
-            title: 'Question Partenaire',
-            content: 'A part l\'appli permettant d\'appeler les apis d\'Orange, OKAPI représente aussi ...',
-            color: '#FF7A00',
-            image: `${require('../images/unknown_animal.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "une girafe-zèbre"
-                    //Les giraffidés constituent une famille des mammifères qui ne compte que 2 espèces, la girafe
-                    // et l’okapi, qui vit dans les forêts pluviales du centre du continent africain.
-                    // on la rencontre dans les forets du RDC (Congo Kinshasa)
-                    //une des cinq dernières espèces de la famille des giraffidés, 
-                    //espèce protégée, considérée comme en danger
-                    //mammifères ruminants de la famille des Giraffiadae, endémique des forêts tropicales de la République démocratique du Congo.
-                },
-                {
-                    content: "un cochon"
-                },
-                {
-                    content: "un cerf"
-                },
-                {
-                    content: "Autre animal"
-                },
-            ]
-        },
-        {
-            title: 'Définition',
-            content: 'Que signifie CogU ?',
-            image: `${require('../images/complaints.png')}`,
-            possibleAnswers: [
-                {
-                    content: "Contested Guest User"
-                },
-                {
-                    content: "Confirmation Guest User" //yes
-                },
-                {
-                    content: "Co-generated User"
-                },
-                {
-                    content: "Common Guest User"
-                },
-            ]
-        },
-        {
-            title: 'Question MEP',
-            content: 'Laquelle des versions suivantes de LOST a engendré un hotfix sur le wording des comptes 1ere Co ?',
-            objectFit: 'cover',
-            image: `${require('../images/doryfor.png')}`,
-            possibleAnswers: [
-                {
-                    content: "3.3.0" //yes
-                },
-                {
-                    content: "3.0.1"
-                },
-                {
-                    content: "3.0.0"
-                },
-                {
-                    content: "2.1.4"
-                },
-            ]
-        },
-        {
-            title: 'Question Authentification',
-            content: 'Quel pourcentage de clients Orange ne se sont pas connectés depuis plus d\'un an ?',
-            color: '#FF7A00',
-            image: `${require('../images/rompiche.png')}`,
-            possibleAnswers: [
-                {
-                    content: "5%"
-                },
-                {
-                    content: "10%"
-                },
-                {
-                    content: "15%"
-                },
-                {
-                    content: "1%" //yes
-                },
-            ]
-        },
-        {
-            title: 'Question Lost',
-            content: 'Lequel des développeurs suivants a fait le plus de commits sur la develop de lost-front ?',
-            image: `${require('../images/blank.png')}`,
-            possibleAnswers: [
-                {
-                    content: "Seb E" //104
-                },
-                {
-                    content: "Pascal" //101
-                },
-                {
-                    content: "Seb G" //41
-                },
-                {
-                    content: "Andrea" //113
-                },
-            ]
-        },
+        // {
+        //     title: 'Question Réseau social',
+        //     content: 'Qui est à l\'origine du tweet suivant ?',
+        //     image: `${require('../images/flore_17.png')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "ZackNani"
+        //         },
+        //         {
+        //             content: "Aminematué"
+        //         },
+        //         {
+        //             content: "Vibrozor"
+        //         },
+        //         {
+        //             content: "DrFlore" //yes
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question SIGNUP',
+        //     content: 'Signup permet de créer des comptes NSRU. Cela signifie ...',
+        //     image: `${require('../images/complaints.png')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Not Signed Request to User"
+        //         },
+        //         {
+        //             content: "Not Signed Registered User"
+        //         },
+        //         {
+        //             content: "Non Suscriber Referenced User" // yes
+        //         },
+        //         {
+        //             content: "Non Suscribed or Registered User"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Vrai/Faux ',
+        //     content: 'Chifai a été PO de Dory ?',
+        //     image: `${require('../images/train in.jpeg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Vrai"
+        //         },
+        //         {
+        //             content: "Faux" // faux
+        //         }
+        //     ]
+        // },
+        // {
+        //     title: 'Question DORY ',
+        //     content: 'Alice est la combien-t-ième PO de l\'équipe ?',
+        //     image: `${require('../images/dory.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "3ème" //yes. Alexandre URVOY, Sylvie THIOLLENT
+        //         },
+        //         {
+        //             content: "4ème"
+        //         },
+        //         {
+        //             content: "5ème"
+        //         },
+        //         {
+        //             content: "Aucune des propositions"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Equipe TIN ',
+        //     content: 'Le dashboard invitation sera porté par l\'équipe ...',
+        //     image: `${require('../images/train in.jpeg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "FEDS"
+        //         },
+        //         {
+        //             content: "FIRE" // yes
+        //         },
+        //         {
+        //             content: "VULKAN"
+        //         },
+        //         {
+        //             content: "System Team"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question DORY',
+        //     content: 'De quoi parle la feature 1613 ?',
+        //     image: `${require('../images/blank.png')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Réponse directe attendue" // VIM
+        //         }
+        //     ]
+        // },
+        // {
+        //     title: 'Question Equipe TIN ',
+        //     content: 'En quoi consiste le projet SUPERBAL ?',
+        //     notAlphabetic: true,
+        //     image: `${require('../images/superbowl.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "L'ancêtre de Multibal"
+        //         },
+        //         {
+        //             content: "Suppression BAL internet sur contrat internet résilié" //yes
+        //             //Suppression de BAL des clients résiliés Internet Seulement
+        //             //hébergé sur PASS Erable
+        //             //si client souhaite déplacer sa BAL depuis un contrat résilié vers un nouveau contrat Orange, vérification du statut 
+        //         },
+        //         {
+        //             content: "Création de compte internet en ligne"
+        //         },
+        //         {
+        //             content: "Suppression de compte internet en ligne"
+        //         },
+        //         {
+        //             content: "Suppression BAL internet sur contrat actif"
+        //         }
+        //     ]
+        // },
+        // {
+        //     title: 'Question Règlementation',
+        //     content: 'Quel est le délai maximum pendant lequel Orange a le droit de conserver une bal avant suppression?',
+        //     image: `${require('../images/judge.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Tant qu'Orange le juge nécessaire"
+        //         },
+        //         {
+        //             content: "1 an" //yes
+        //         },
+        //         {
+        //             content: "6 mois"
+        //         },
+        //         {
+        //             content: "5 ans"
+        //         },
+        //         {
+        //             content: "Autre réponse"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Equipe TIN',
+        //     content: 'Que retrouve-t-on sur le logo de VULKAN ?',
+        //     image: `${require('../images/vulkan.png')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Un forgeron portant un marteau"
+        //         },
+        //         {
+        //             content: "Un volcan en éruption"
+        //         },
+        //         {
+        //             content: "Un marteau et une enclume" //yes
+        //         },
+        //         {
+        //             content: "Un captcha à résoudre"
+        //         },
+        //         {
+        //             content: "Un taureau"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question MULTIBAL ',
+        //     content: 'Par combien d\'étapes doit passer un client qui fait un Multibal ?',
+        //     image: `${require('../images/dory.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "3"
+        //         },
+        //         {
+        //             content: "4" //yes 1) vos informations, 2) Adresse email, 3) mot de passe, 4) Création
+        //         },
+        //         {
+        //             content: "5"
+        //         },
+        //         {
+        //             content: "6"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Credentials ',
+        //     content: 'Que signifie LDAP ?',
+        //     //ldap permet d'accéder à des bases d'informations sur les utilisateurs d'un réseau, via l'interrogation d'annuaires. 
+        //     image: `${require('../images/ldap.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Lightweight Directory Access Protocol" //yes
+        //         },
+        //         {
+        //             content: "Live Data Access Protocol"
+        //         },
+        //         {
+        //             content: "Autre proposition"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Versions ',
+        //     content: 'Laquelle / lesquelles des propositions suivantes ne permet(tent) pas d\'avoir le numéro de version de l\'api de Signup sur tb2oab ?',
+        //     notAlphabetic: true,
+        //     image: `${require('../images/dory.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Visiter https://login-tb2oab.staging.orange.fr/signup/api/status"
+        //             //yes
+        //         },
+        //         {
+        //             content: "Visiter https://login-tb2oab.staging.orange.fr/signup/api/version"
+        //             //no, n'existe pas
+        //         },
+        //         {
+        //             content: "Visiter https://login-tb2oab.staging.orange.fr/signup/api/env"
+        //             // no, donne les variables d'env, pas le numéro de version
+        //         },
+        //         {
+        //             content: "Demander à Seb E"
+        //             // yes
+        //         },
+        //         {
+        //             content: "Aucune des propositions"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Equipe',
+        //     content: 'Qui se charge du portail JDD ?',
+        //     image: `${require('../images/train in.jpeg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "FIRE"
+        //         },
+        //         {
+        //             content: "FEDS" //yes
+        //         },
+        //         {
+        //             content: "System Team"
+        //         },
+        //         {
+        //             content: "Aucune des propositions"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Equipe',
+        //     content: 'Quelles sont les 2 dernières personnes à avoir quittés l\'équipe DORY ?',
+        //     image: `${require('../images/dory.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Réponse directe attendue" //Chifai & Gossard
+        //         }
+        //     ]
+        // },
+        // {
+        //     title: 'Question Manage',
+        //     content: 'Quel est le code basicat ?',
+        //     image: `${require('../images/dory.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "MAN"
+        //         },
+        //         {
+        //             content: "MNG"
+        //         },
+        //         {
+        //             content: "MGE"
+        //         },
+        //         {
+        //             content: "Aucune des propositions" // GNM
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question technique',
+        //     content: 'Laquelle / lesquelles des affirmation(s) suivante(s) permet(tent) d\'être sûr qu\'un JDD est un VRAI pro ?',
+        //     image: `${require('../images/dory.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "MSS = 6"
+        //         },
+        //         {
+        //             content: "SPR = 7"
+        //         },
+        //         {
+        //             content: "SPR > 5"
+        //         },
+        //         {
+        //             content: "La mention 'PROF' sur CSRTool" //outil du Customer Care d'Orange France permettant d'unifier les demandes d'assistances
+        //             //pour les clients I, M, GP, Pro...
+        //         },
+        //         {
+        //             content: "Autre proposition" // market segment de hparties
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Partenaire',
+        //     content: 'MCI peut modifier les moyens de contact ?',
+        //     image: `${require('../images/flore_3.png')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Vrai"
+        //         },
+        //         {
+        //             content: "Faux" //yes
+        //         }
+        //     ]
+        // },
+        // {
+        //     title: 'Question Partenaire',
+        //     content: 'A part l\'appli permettant d\'appeler les apis d\'Orange, OKAPI représente aussi ...',
+        //     color: '#FF7A00',
+        //     image: `${require('../images/unknown_animal.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "une girafe-zèbre"
+        //             //Les giraffidés constituent une famille des mammifères qui ne compte que 2 espèces, la girafe
+        //             // et l’okapi, qui vit dans les forêts pluviales du centre du continent africain.
+        //             // on la rencontre dans les forets du RDC (Congo Kinshasa)
+        //             //une des cinq dernières espèces de la famille des giraffidés, 
+        //             //espèce protégée, considérée comme en danger
+        //             //mammifères ruminants de la famille des Giraffiadae, endémique des forêts tropicales de la République démocratique du Congo.
+        //         },
+        //         {
+        //             content: "un cochon"
+        //         },
+        //         {
+        //             content: "un cerf"
+        //         },
+        //         {
+        //             content: "Autre animal"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Définition',
+        //     content: 'Que signifie CogU ?',
+        //     image: `${require('../images/complaints.png')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Contested Guest User"
+        //         },
+        //         {
+        //             content: "Confirmation Guest User" //yes
+        //         },
+        //         {
+        //             content: "Co-generated User"
+        //         },
+        //         {
+        //             content: "Common Guest User"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question MEP',
+        //     content: 'Laquelle des versions suivantes de LOST a engendré un hotfix sur le wording des comptes 1ere Co ?',
+        //     objectFit: 'cover',
+        //     image: `${require('../images/doryfor.png')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "3.3.0" //yes
+        //         },
+        //         {
+        //             content: "3.0.1"
+        //         },
+        //         {
+        //             content: "3.0.0"
+        //         },
+        //         {
+        //             content: "2.1.4"
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Authentification',
+        //     content: 'Quel pourcentage de clients Orange ne se sont pas connectés depuis plus d\'un an ?',
+        //     color: '#FF7A00',
+        //     image: `${require('../images/rompiche.png')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "5%"
+        //         },
+        //         {
+        //             content: "10%"
+        //         },
+        //         {
+        //             content: "15%"
+        //         },
+        //         {
+        //             content: "1%" //yes
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Lost',
+        //     content: 'Lequel des développeurs suivants a fait le plus de commits sur la develop de lost-front ?',
+        //     image: `${require('../images/blank.png')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "Seb E" //51
+        //         },
+        //         {
+        //             content: "Pascal" //55
+        //         },
+        //         {
+        //             content: "Seb G" //19
+        //         },
+        //         {
+        //             content: "Andrea" //73
+        //         },
+        //     ]
+        // },
+        // {
+        //     title: 'Question Groupe',
+        //     content: 'Pour quelle(s) raison(s) Stéphane Richard (ex. PDG Orange) a-t-il du précipiter son départ ?',
+        //     color: '#FF7A00',
+        //     image: `${require('../images/richard.jpg')}`,
+        //     possibleAnswers: [
+        //         {
+        //             content: "il est mêlé à une escroquerie en bande organisée" //yes
+        //         },
+        //         {
+        //             content: "il a fait preuve de sexisme"
+        //         },
+        //         {
+        //             content: "il a été impliqué dans l'affaire Tapie"
+        //         },
+        //         {
+        //             content: "il a eu des histoires extra-conjugales avec Fabienne Dulac"
+        //         },
+        //     ]
+        // },
+
+        // la suite next time ....
         {
             title: 'Question Delete',
             content: 'Quel(s) utilisateur(s) peuvent accéder à Delete account',
@@ -602,28 +624,6 @@ export const questions =
             ]
         },
         {
-            title: 'Question DORY',
-            content: 'Parmi les briques gérées par l\'équipe, le(s)quel(s) nécessite(nt) d\'avoir son mobile à portée de main ?',
-            image: `${require('../images/blank.png')}`,
-            possibleAnswers: [
-                {
-                    content: "MULTIBAL"
-                },
-                {
-                    content: "RECOVERY" //yes
-                },
-                {
-                    content: "MANAGE MAIL"
-                },
-                {
-                    content: "MANAGE PASSWORD" //yes
-                },
-                {
-                    content: "SIGNUP"
-                },
-            ]
-        },
-        {
             title: 'Question Parnasse', // triche
             content: 'A l\'origine, l\'offre Parnasse était réservée ...',
             image: `${require('../images/parnasse.webp')}`,
@@ -658,26 +658,6 @@ export const questions =
                 },
                 {
                     content: "ISAAC Arnaud" // epic owner
-                },
-            ]
-        },
-        {
-            title: 'Question Groupe',
-            content: 'Pour quelle(s) raison(s) Stéphane Richard (ex. PDG Orange) a-t-il du précipiter son départ ?',
-            color: '#FF7A00',
-            image: `${require('../images/richard.jpg')}`,
-            possibleAnswers: [
-                {
-                    content: "il est mêlé à une escroquerie en bande organisée" //yes
-                },
-                {
-                    content: "il a fait preuve de sexisme"
-                },
-                {
-                    content: "il a été impliqué dans l'affaire Tapie"
-                },
-                {
-                    content: "il a eu des histoires extra-conjugales avec Fabienne Dulac"
                 },
             ]
         },
@@ -748,7 +728,7 @@ export const questions =
         },
         {
             title: 'Mise en situation',
-            content: 'Madame Michu se trouve en boutique Orange. Elle a un mobile de contact. Elle souhaite créer un compte secondaire pour son fils Michaud. Elle possède un compte Internet principal. Elle peut le faire ? (justification attendue)',
+            content: 'Madame Michu se trouve en boutique Orange. Elle a un mobile de contact mais n\'a pas MC. Elle souhaite créer un compte secondaire pour son fils Michaud. Elle possède un compte Internet principal. Elle peut le faire ? (justification attendue)',
             color: '#FF7A00',
             image: `${require('../images/michu.webp')}`,
             possibleAnswers: [
@@ -988,7 +968,7 @@ export const questions =
         },
         {
             title: 'Mise en situation',
-            content: 'Madame Michu se trouve en boutique Orange. Elle est titulaire d\'une ligne Internet sur laquelle elle a renseigné son mobile de contact. Elle a déjà créé un compte secondaire pour son fils Michaud. Il n\'a pas encore de mdc. Elle veut ajouter sur le compte de son fils, son mobile en moyen de contact. Comment peut-elle faire ?',
+            content: 'Madame Michu se trouve en boutique Orange. Elle est titulaire d\'une ligne Internet sur laquelle elle a renseigné son mobile de contact MAIS N\'A PAS MC. Elle a déjà créé un compte secondaire pour son fils Michaud. Il n\'a pas encore de mdc. Elle veut ajouter sur le compte de son fils, son mobile en moyen de contact. Comment peut-elle faire ?',
             color: '#FF7A00',
             notAlphabetic: true,
             image: `${require('../images/michu.webp')}`,
@@ -1025,7 +1005,8 @@ export const questions =
         },
         {
             title: 'Question DORY',
-            content: 'En moyenne, combien de clients passent par cette page chaque jour ?',
+            content: 'En moyenne, combien de clients passent par cette page chaque jour ? (sept. 2022)',
+            notAlphabetic: true,
             image: `${require('../images/confirm_lost.png')}`,
             possibleAnswers: [
                 {
@@ -1050,6 +1031,18 @@ export const questions =
             possibleAnswers: [
                 {
                     content: "Réponse attendue" //plusieurs réponses sont possibles
+                }
+            ]
+        },
+        {
+            title: 'Question Lost',
+            content: 'Qu\'est ce qui ne va pas ?',
+            color: '#FF7A00',
+            objectFit: 'contain',
+            image: `${require('../images/pro.png')}`,
+            possibleAnswers: [
+                {
+                    content: "Plusiers réponses" //plusieurs réponses sont possibles
                 }
             ]
         },

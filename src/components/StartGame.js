@@ -18,7 +18,10 @@ export const StartGame = () => {
   const [hasStarted, setHasStarted] = useState(false);
 
   const playersArray = localStorage.getItem("playersArray");
-  const [players, setPlayers] = useState(null);
+  console.log("hello", playersArray)
+  //ATTENTION : ne pas oublier le setItem("players", newTable);
+  const [players, setPlayers] = useState(playersArray);
+
   const [submittedPlayersAnswers, setSubmittedPlayersAnswers] = useState([]);
 
   useEffect(() => {
@@ -35,6 +38,7 @@ export const StartGame = () => {
     //get number of slides
     // const slides = document.getElementsByClassName("carousel-item").length;
     const slides = questions.length;
+    console.log(playersArray)
     console.log('slides', slides)
     setNumberOfSlides(slides);
   }, []);
@@ -50,6 +54,7 @@ export const StartGame = () => {
     newSubmittedPlayers[index].submitted = true;
     newSubmittedPlayers[index].goodAnswer = true;
     setSubmittedPlayersAnswers(newSubmittedPlayers);
+
   };
 
   const handleWrongAnswer = (player, index) => {
@@ -154,7 +159,7 @@ export const StartGame = () => {
                   </p>
                   <ol style={{ listStyleType: (question.notAlphabetic ? 'none' : 'lower-alpha'), marginLeft: "20rem", marginTop: '1rem' }}>
                     {question.possibleAnswers.map((answer, index) => (
-                      <li style={{ textIndent: "-20rem" }}>{answer.content}</li>
+                      <li style={{ textIndent: "-20rem" }}><div>{answer.content}</div></li>
                     ))}
                   </ol>
                 </Carousel.Caption>
